@@ -46,7 +46,8 @@ def randomized_quick_sort(array):
 
 def stdin():
     if "tests" in sys.argv:
-        tests()
+        return tests()
+
     input = sys.stdin.read()
     _, *array = list(map(int, input.split()))
     array = randomized_quick_sort(array)
@@ -64,8 +65,9 @@ def test(function, case, expected):
     obtained = function(*case)
     if expected != obtained:
         show(" [FAILED]\n")
-        raise AssertionError("\n\nFor case: %s,\n%s was expected,\n%s was obtained." % (case,
-            expected, obtained))
+        raise AssertionError(("\n\nFor case: %s,\n"
+                              "%s was expected,\n"
+                              "%s was obtained.") % (case, expected, obtained))
     else:
         show(" [OK]")
 
