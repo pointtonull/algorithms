@@ -2,6 +2,7 @@
 
 import sys
 from collections import defaultdict
+from itertools import chain
 import random
 
 def get_majority_element(array, left=0, right=None):
@@ -21,7 +22,8 @@ def get_majority_element_naive(sequence):
 
 def stdin():
     if "tests" in sys.argv:
-        tests()
+        return tests()
+
     input = sys.stdin.read()
     _, *a = list(map(int, input.split()))
     if get_majority_element(a) != -1:
@@ -34,37 +36,42 @@ def show(*args, **kwargs):
     print(*args, **kwargs, file=sys.stderr)
 
 
-def test(case, expected):
-    show("Case: %s, expected: %s" % (case, expected), end="")
-    obtained = get_majority_element(case)
+def test(function, case, expected):
+    show("%s%s" % (getattr(function, "__name__", "Case: "), case))
+    show("    => %s" % expected, end="")
+    obtained = function(*case)
     if expected != obtained:
         show(" [FAILED]\n")
-        raise AssertionError("\n\nFor case: %s,\n%s was expected,\n%s was obtained." % (case,
-            expected, obtained))
+        raise AssertionError(("\n\nFor case: %s,\n"
+                              "%s was expected,\n"
+                              "%s was obtained.") % (case, expected, obtained))
     else:
         show(" [OK]")
 
 
-def tests():
-    cases = (
-            (list(range(5)), -1),
-            (list(range(5)), -1),
-            ([1, 1, 2, 2, 3], -1),
-            ([1, 1, 2, 2, 1], 1),
-            ([1, 1, 2, 2, 1, 0], -1),
-            )
-    for case, result in cases:
-        test(case, result)
-    stress_tests()
-
-
-def stress_tests():
+def stress_cases():
+    """
+    Returns Infinite(TM) (Case, Expected) pairs.
+    """
     random.seed(0)
     while True:
         lenght = random.randrange(1, 10)
         array = [random.randrange(10) for _ in range(lenght)]
         expected = get_majority_element_naive(array)
-        test(array, expected)
+        yield ((array,), expected)
+
+
+def tests():
+    cases = (
+            ((list(range(5)),), -1),
+            ((list(range(5)),), -1),
+            (([1, 1, 2, 2, 3],), -1),
+            (([1, 1, 2, 2, 1],), 1),
+            (([1, 1, 2, 2, 1, 0],), -1),
+            )
+    for case, expected in chain(cases, stress_cases()):
+        test(get_majority_element, case, expected)
+
 
 if __name__ == '__main__':
     stdin()
