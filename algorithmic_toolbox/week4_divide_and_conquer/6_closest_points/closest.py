@@ -88,7 +88,8 @@ def show(*args, **kwargs):
 
 def stdin():
     if "tests" in sys.argv:
-        tests()
+        return tests()
+
     input = sys.stdin.read()
     data = list(map(int, input.split()))
     x = data[1::2]
@@ -109,8 +110,9 @@ def test(case, expected):
     show("  %s" % str(case))
     obtained = minimum_distance(case)
     if not equal_enough(expected, obtained):
-        raise ValueError("for case: %s, result:\n%s was expected,\n%s was obtained" % (
-            case, expected, obtained))
+        raise ValueError(("for case: %s, result:\n"
+                          "%s was expected,\n"
+                          "%s was obtained") % (case, expected, obtained))
 
 
 def tests():
