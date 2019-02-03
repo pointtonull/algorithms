@@ -1,9 +1,9 @@
 # Uses python3
 
-import sys
 from collections import defaultdict
 from itertools import chain
 import random
+import sys
 
 def get_majority_element(array, left=0, right=None):
     return get_majority_element_naive(array)
