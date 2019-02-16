@@ -2,7 +2,6 @@
 
 from itertools import chain, combinations_with_replacement
 from math import ceil
-from functools import lru_cache
 import random
 import sys
 from textwrap import indent
@@ -10,16 +9,15 @@ from textwrap import indent
 COINS = (1, 3, 4)
 
 
-@lru_cache()
 def get_change(money):
-    if money == 0:
-        return 0
-    if money in COINS:
-        return 1
-    else:
-        return min(get_change(money - coin)
-                   for coin in COINS
-                   if coin <= money) + 1
+    array = list(range(money + 1))
+    new_value = 0
+    for pos in range(1, money + 1):
+        new_value = min(array[pos - coin] + 1
+                        for coin in COINS
+                        if coin <= money)
+        array[pos] = new_value
+    return new_value
 
 
 def get_change_naive(money):
@@ -29,7 +27,8 @@ def get_change_naive(money):
             if sum(combination) == money:
                 return needed
     else:
-        raise ValueError(f"Could not find combination of {COINS} for {money}.")
+        raise ValueError("Could not find combination of %s for %d." % (
+            COINS, money))
 
 
 def stdin():
@@ -65,13 +64,15 @@ def stress_cases():
     """
     random.seed(0)
     while True:
-        money = random.randrange(1, 10)
+        money = random.randrange(1, 1000)
         expected = get_change_naive(money)
         yield ((money,), expected)
 
 
 def tests():
     cases = (
+            ((0,), 0),
+            ((1,), 1),
             ((2,), 2),
             ((34,), 9),
             )
