@@ -1,3 +1,15 @@
+"""
+Given a list of strings, write a function to return all subsets of the strings
+that are anagrams (e.g. "rope" == "pore", "fairy tales" == "rail safety").
+For example:
+["apple", "rope", "cat", "tac", "atc", "pore"]
+-> [["apple"], ["rope", "pore"], ["cat", "tac", "atc"]]
+["deer", "red", "reed", "cat"]
+-> [["deer", "reed"], ["red"], ["cat"]]
+
+This is not the simplest solution but just a implementation reference for primes approach.
+"""
+
 import string
 from functools import reduce
 from operator import mul
