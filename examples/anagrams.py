@@ -25,6 +25,7 @@ LETTER_PRIME = dict(
                        )
                    )
 
+
 def anagram_hash(word):
     """
     > anagram_hash('cat')
