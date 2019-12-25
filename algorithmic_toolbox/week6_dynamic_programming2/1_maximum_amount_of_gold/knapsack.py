@@ -6,19 +6,15 @@ import random
 import sys
 
 
-def optimal_weight(capacity, weights):
-    cum = [[0 for x in range(len(weights) + 1) ]
-           for x in range(capacity + 1)]
-    for i in range(len(weights)): 
-        for w in range(capacity + 1): 
-            if i == 0 or w == 0: 
-                cum[i][capacity] = 0
-            elif wt[i-1] <= w: 
-                cum[i][capacity] = max(val[i - 1] + cum[i - 1][w-wt[i - 1]],
-                                cum[i - 1][w])
-            else: 
-                cum[i][w] = cum[i-1][w]
-    return cum[capacity][W] 
+def optimal_weight(s, a):
+        can = [True] + [False] * s
+        for x in a:
+            for i in range(s - x + 1)[::-1] :
+                if can[i]:
+                    can[i + x] = True
+        while not can[s]:
+            s -= 1
+        return s
 
 
 def optimal_weight_naive(capacity, weights):

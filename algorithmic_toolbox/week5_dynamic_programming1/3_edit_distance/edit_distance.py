@@ -6,6 +6,11 @@ from textwrap import indent
 import random
 import sys
 
+try:
+    from Levenshtein import distance
+except:
+    distance = lambda left, right: 0
+
 
 def edit_distance(left, right):
     show(left, right)
@@ -29,7 +34,7 @@ def edit_distance(left, right):
 
 
 def edit_distance_naive(left, right):
-    raise NotImplementedError("Not implemented!")
+    return distance(left, right)
 
 
 def stdin():

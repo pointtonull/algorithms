@@ -6,7 +6,7 @@ import random
 import sys
 
 
-def lcs2(horizontal, vertical):
+def lcs2(left, right):
     show(left, right)
     pos_dist = {(row, 0): row for row in range(len(left) + 1)}
     pos_dist.update({(0, col): col for col in range(len(right) + 1)})
