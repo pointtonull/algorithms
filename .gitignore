@@ -1,3 +1,14 @@
+# project specific
+.deps
+*.sw?
+.vscode/
+algorithmic_toolbox/
+data_structures/
+lfd/
+src/
+tests/
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
