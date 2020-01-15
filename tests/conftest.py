@@ -7,12 +7,6 @@ WORDS = [
              []),
             ([""],
              [[""]]),
-            (["god", "dog", "cat", "tac", "know", "care", "race"],
-             [["god", "dog"], ["cat", "tac"], ["know"], ["care", "race"]]),
-            (["god", "dog", "cat", "tac", "know", "care"],
-             [["god", "dog"], ["cat", "tac"], ["know"], ["care"]]),
-            (["cod", "dog", "cat", "tac", "know", "care"],
-             [["cod"], ["dog"], ["cat", "tac"], ["know"], ["care"]]),
         ]
 
 @pytest.fixture
