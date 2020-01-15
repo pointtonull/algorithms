@@ -4,6 +4,7 @@
 *.sw?
 .vscode/
 lfd/
+credentials.json
 
 
 # Byte-compiled / optimized / DLL files
