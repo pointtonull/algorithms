@@ -4,11 +4,13 @@
 {{ cookiecutter.problem_description }}
 """
 
-def {{ cookiecutter.function_name }}():
+def {{ cookiecutter.function_name }}(input1, input2):
     """{{ cookiecutter.problem_name}}
 
     """
+    result = []
     raise NotImplementedError("Must implement {{ cookiecutter.problem_name }} solution.")
+    return result
 
 
 if __name__ == "__main__":

@@ -20,24 +20,19 @@ clean:
 	@-rm .deps
 
 ipython: deps
-	cd $(SRC);\
 	$(PYTHON) -m IPython
 
 unit test: deps
-	cd $(SRC);\
 	$(PYTHON) -m pytest ../tests
 
 tdd: deps
-	cd $(SRC);\
 	$(PYTHON) -m pytest --stepwise $(TESTS)
 
-new: deps
+new: test
 	$(PYTHON) util/fetch_problem.py
 
 debug: deps
-	cd $(SRC);\
 	$(PYTHON) -m pytest --stepwise -vv --pdb $(TESTS)
 
 coverage: deps
-	cd $(SRC);\
 	$(PYTHON) -m pytest ../tests --cov $(SRC) --cov-report=term-missing ../tests

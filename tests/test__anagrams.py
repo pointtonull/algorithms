@@ -1,7 +1,8 @@
 from pytest import fixture
 
-from anagrams import group_anagrams
 from utils import deep_diff
+
+from src.anagrams import group_anagrams
 
 
 GROUP_ANAGRAMS_CASES = [

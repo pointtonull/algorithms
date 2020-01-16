@@ -1,7 +1,8 @@
 from pytest import fixture
 
-from {{ cookiecutter.module_name }} import {{ cookiecutter.function_name }}
-from .utils import deep_diff
+from utils import deep_diff
+
+from src.{{ cookiecutter.module_name }} import {{ cookiecutter.function_name }}
 
 """
 {{ cookiecutter.problem_name}}

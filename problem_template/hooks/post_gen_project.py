@@ -17,7 +17,7 @@ def safe_move(old_path, new_path):
     if os.path.exists(new_path):
         raise RuntimeError(f"Destination already exists: {new_path}")
     os.rename(old_path, new_path)
-    print(f"{INFO}Created file: {new_path}{TERMINATOR}")
+    print(f"{INFO}Created file: {old_path}{TERMINATOR}")
 
 
 def append(old_path, new_path):
@@ -27,7 +27,7 @@ def append(old_path, new_path):
     content = open(old_path).read()
     with open(new_path, "a") as file:
         file.write(content)
-    print(f"{INFO}Updated file: {new_path}{TERMINATOR}")
+    print(f"{INFO}Updated file: {old_path}{TERMINATOR}")
 
 
 def main():

@@ -1,6 +1,6 @@
 from pytest import fixture
 
-from reconstruct_sentence import reconstruct_sentence
+from src.reconstruct_sentence import reconstruct_sentence
 
 
 CASES = [

@@ -1,6 +1,6 @@
 from pytest import fixture
 
-from radix_search import search_text, search_eval
+from src.radix_search import search_text, search_eval
 
 
 CASES = [

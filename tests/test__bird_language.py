@@ -1,4 +1,4 @@
-from bird_language import translate
+from src.bird_language import translate
 
 
 def test__translate__signature():
