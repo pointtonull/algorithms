@@ -1,7 +1,6 @@
 {
     "problem_name": "Thingy",
-    "problem_slug": "{{ cookiecutter.problem_name.lower().replace(' ', '_').replace('-', '_') }}",
     "problem_description": "{{ cookiecutter.problem_name }} description",
-    "module_name": "{{ cookiecutter.problem_slug }}",
-    "function_name": "{{ cookiecutter.problem_slug }}"
+    "module_name": "{{ cookiecutter.problem_name.lower().replace(' ', '_').replace('-', '_') }}",
+    "function_name": "{{ cookiecutter.problem_name.lower().replace(' ', '_').replace('-', '_') }}"
 }

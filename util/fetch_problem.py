@@ -2,10 +2,11 @@ import pickle
 import os.path
 import base64
 
-import IPython
-from googleapiclient.discovery import build
-from google_auth_oauthlib.flow import InstalledAppFlow
+from cookiecutter.main import cookiecutter
 from google.auth.transport.requests import Request
+from google_auth_oauthlib.flow import InstalledAppFlow
+from googleapiclient.discovery import build
+import IPython
 
 SCOPES = ['https://www.googleapis.com/auth/gmail.modify']
 
@@ -24,8 +25,8 @@ def main():
             creds.refresh(Request())
         else:
             try:
-            flow = InstalledAppFlow.from_client_secrets_file(
-                'credentials.json', SCOPES)
+                flow = InstalledAppFlow.from_client_secrets_file(
+                    'credentials.json', SCOPES)
             except IOError:
                 print("To access to your mail's problems you must create "
                       "credentials here: "
@@ -63,9 +64,11 @@ def main():
     problem = problem.splitlines()
     if problem[0].lower().startswith("good morning"):
         del(problem[0])
-    problem = "\n".join(problem).strip()
-    print(problem)
-    problem_name = input("Give the problem a name: ")
+    problem_description = "\n".join(problem).strip()
+    print(problem_description)
+
+    extra_context = {"problem_description": problem_description}
+    cookiecutter("problem_template", extra_context=extra_context)
 
     update = messages.modify(userId="me", id=next_message_id,
                              body={"removeLabelIds": ["INBOX"]})

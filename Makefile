@@ -31,6 +31,9 @@ tdd: deps
 	cd $(SRC);\
 	$(PYTHON) -m pytest --stepwise $(TESTS)
 
+new: deps
+	$(PYTHON) util/fetch_problem.py
+
 debug: deps
 	cd $(SRC);\
 	$(PYTHON) -m pytest --stepwise -vv --pdb $(TESTS)

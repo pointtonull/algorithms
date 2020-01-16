@@ -10,13 +10,24 @@ SUCCESS = "\x1b[1;32m [SUCCESS]: "
 
 
 def remove_tmp_dir():
-    shutil.rmtree("../tmp_{{ cookiecutter.problem_slug }}")
+    shutil.rmtree("../tmp_{{ cookiecutter.module_name }}")
 
 
 def safe_move(old_path, new_path):
     if os.path.exists(new_path):
-        raise RuntimeError("Destination already exists.")
+        raise RuntimeError(f"Destination already exists: {new_path}")
     os.rename(old_path, new_path)
+    print(f"{INFO}Created file: {new_path}{TERMINATOR}")
+
+
+def append(old_path, new_path):
+    if not os.path.exists(new_path):
+        raise RuntimeError(f"Destination does not exists: {new_path}")
+
+    content = open(old_path).read()
+    with open(new_path, "a") as file:
+        file.write(content)
+    print(f"{INFO}Updated file: {new_path}{TERMINATOR}")
 
 
 def main():
@@ -26,6 +37,7 @@ def main():
             ]
     for filename in filenames:
         safe_move(filename, "../{}".format(filename))
+    append("README.md", "../README.md")
     remove_tmp_dir()
     print("{}make tdd and happy hacking!{}".format(SUCCESS, TERMINATOR))
 
