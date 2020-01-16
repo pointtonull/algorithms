@@ -23,7 +23,7 @@ ipython: deps
 	$(PYTHON) -m IPython
 
 unit test: deps
-	$(PYTHON) -m pytest ../tests
+	$(PYTHON) -m pytest tests
 
 tdd: deps
 	$(PYTHON) -m pytest --stepwise $(TESTS)
@@ -35,4 +35,4 @@ debug: deps
 	$(PYTHON) -m pytest --stepwise -vv --pdb $(TESTS)
 
 coverage: deps
-	$(PYTHON) -m pytest ../tests --cov $(SRC) --cov-report=term-missing ../tests
+	$(PYTHON) -m pytest tests --cov $(SRC) --cov-report=term-missing tests
