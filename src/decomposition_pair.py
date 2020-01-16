@@ -1,5 +1,5 @@
 
-def decomposition_pair(numbers, total):
+def decomposition_pair(numbers, total):  # O(n)
     """Decomposition pair
 
     Given a list of numbers and a number k, return whether any two numbers from the
