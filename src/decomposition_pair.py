@@ -18,7 +18,3 @@ def decomposition_pair(numbers, total):  # O(n)
             return True
         seen.add(number)
     return False
-
-
-if __name__ == "__main__":
-    print(decomposition_pair([10, 15, 3, 7], 17)
