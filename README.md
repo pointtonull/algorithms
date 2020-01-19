@@ -16,8 +16,9 @@ For example, given [10, 15, 3, 7] and k of 17, return true since 10 + 7 is 17.
 
 Bonus: Can you do this in one pass?
 
-[solution](src/decomposition_pair.py)
-[tests](tests/test__decomposition_pair.py)
+Solution:
+- [tests](tests/test__decomposition_pair.py)
+- [implementation](src/decomposition_pair.py)
 
 ## The product of others
 
