@@ -5,7 +5,7 @@ from utils import deep_diff
 from src.{{ cookiecutter.module_name }} import {{ cookiecutter.function_name }}
 
 """
-{{ cookiecutter.problem_name}}
+{{ cookiecutter.problem_name.upper() }}
 
 {{ cookiecutter.problem_description }}
 """
@@ -38,9 +38,6 @@ def case(request):
 def test__{{ cookiecutter.function_name }}__signature(case):
     input1 = case["input1"]
     input2 = case["input2"]
-
-    result = {{ cookiecutter.function_name }}(input1, input2)
-    assert isinstance(result, list)
 
     result = {{ cookiecutter.function_name }}(input1, input2)
     assert isinstance(result, int)
