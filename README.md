@@ -1,8 +1,9 @@
-# algorithms
+# Algorithms
+
 Courses Coding Asigments
 
-# Problem of the day
 
+# Problem of the day
 
 ## Decomposition pair
 
