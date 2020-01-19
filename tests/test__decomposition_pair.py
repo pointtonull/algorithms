@@ -44,9 +44,6 @@ def test__decomposition_pair__signature(case):
     result = decomposition_pair(numbers, total)
     assert isinstance(result, bool)
 
-    result = decomposition_pair(numbers, total)
-    assert isinstance(result, int)
-
 
 def test__decomposition_pair__examples(case):
     numbers = case["numbers"]

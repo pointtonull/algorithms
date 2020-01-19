@@ -18,20 +18,10 @@ Follow-up: what if you can't use division?
 """
 
 CASES = [
-    {
-        "numbers": [1, 2, 3, 4, 5],
-        "answer": [120, 60, 40, 30, 24],
-    },
-    {
-        "numbers": [3, 2, 1],
-        "answer": [2, 3, 6],
-    },
-    {
-        "numbers": [3, 0, 1],
-        "answer": [0, 3, 0],
-    },
+    {"numbers": [1, 2, 3, 4, 5], "answer": [120, 60, 40, 30, 24],},
+    {"numbers": [3, 2, 1], "answer": [2, 3, 6],},
+    {"numbers": [3, 0, 1], "answer": [0, 3, 0],},
 ]
-
 
 
 @fixture(params=CASES)
@@ -52,4 +42,3 @@ def test__the_product_of_others__examples(case):
 
     result = the_product_of_others(numbers)
     assert answer == result
-
