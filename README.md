@@ -37,3 +37,48 @@ Follow-up: what if you can't use division?
 Solution:
 - [tests](tests/test__the_product_of_others.py)
 - [implementation](src/the_product_of_others.py)
+
+
+## Tree Again
+
+This problem was asked by Google.
+
+Given the root to a binary tree, implement serialize(root), which serializes the
+tree into a string, and deserialize(s), which deserializes the string back into
+the tree.
+
+For example, given the following Node class
+
+```Python
+    class Node:
+        def __init__(self, val, left=None, right=None):
+            self.val = val
+            self.left = left
+            self.right = right
+```
+
+
+The following test should pass:
+
+```Python
+    node = Node('root', Node('left', Node('left.left')), Node('right'))
+    assert deserialize(serialize(node)).left.left.val == 'left.left'
+```
+
+I decided not to take shortcuts (using custom serializer for pickle or json), but instead implement a tailored syntax. It's not too complex and allows for a more clean representation:
+
+```
+    root
+        left
+            left.left
+                None
+                None
+            None
+        right
+            None
+            None
+```
+
+Solution:
+- [tests](tests/test__tree_again.py)
+- [implementation](src/tree_again.py)
