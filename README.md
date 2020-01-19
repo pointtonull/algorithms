@@ -33,3 +33,7 @@ For example, if our input was [1, 2, 3, 4, 5], the expected output would be
 [2, 3, 6].
 
 Follow-up: what if you can't use division?
+
+Solution:
+- [tests](tests/test__the_product_of_others.py)
+- [implementation](src/the_product_of_others.py)
