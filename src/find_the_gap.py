@@ -1,4 +1,4 @@
-def find_the_gap(numbers):
+def find_the_gap(numbers):  # O(n) time, O(1) space
     """FIND THE GAP
 
     This problem was asked by Stripe.
