@@ -2,7 +2,7 @@ import re
 from textwrap import dedent
 
 
-INDENTATION = "    "
+INDENTATION = " " * 4
 RE_TREE = re.compile(
     r"^(?P<val>\w.*?)\n(?P<left>{}\w.*?)\n(?P<right>{}\w.*)".format(
         INDENTATION, INDENTATION
