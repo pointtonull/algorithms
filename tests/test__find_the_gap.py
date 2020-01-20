@@ -1,3 +1,5 @@
+from copy import deepcopy as copy
+
 from pytest import fixture
 
 from src.find_the_gap import find_the_gap
@@ -45,7 +47,7 @@ CASES = [
 
 @fixture(params=CASES)
 def case(request):
-    return request.param
+    return copy(request.param)  # modifies in place
 
 
 def test__find_the_gap__signature(case):
