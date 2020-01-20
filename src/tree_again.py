@@ -49,7 +49,9 @@ class Node:
 
 def serialize(tree, indent=0):
     """
-    I decided to do the hard work and implement a custom, compact format instead of doing the easy thing (converting to dict and json). The advantage is, the format is clean and easy to read:
+    I decided to do the hard work and implement a custom, compact format instead of
+    doing the easy thing (converting to dict and json). The advantage is, the format is
+    clean and easy to read:
         root
             left
                 left.left

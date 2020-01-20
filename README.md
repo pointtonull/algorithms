@@ -65,7 +65,9 @@ The following test should pass:
     assert deserialize(serialize(node)).left.left.val == 'left.left'
 ```
 
-I decided not to take shortcuts (using custom serializer for pickle or json), but instead implement a tailored syntax. It's not too complex and allows for a more clean representation:
+I decided not to take shortcuts (using custom serializer for pickle or json), but
+instead implement a tailored syntax. It's not too complex and allows for a more clean
+representation:
 
 ```
     root
