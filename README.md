@@ -128,3 +128,39 @@ Implement car and cdr.
 Solution:
 - [tests](tests/test__twisted_pair.py)
 - [implementation](src/twisted_pair.py)
+
+
+## Xor List
+
+This problem was asked by Google.
+
+An XOR linked list is a more memory efficient doubly linked list. Instead of
+each node holding next and prev fields, it holds a field named both, which is an
+XOR of the next node and the previous node. Implement an XOR linked list; it has
+an add(element) which adds the element to the end, and a get(index) which
+returns the node at index.
+
+If using a language that has no pointers (such as Python), you can assume you
+have access to get_pointer anddereference_pointer functions that converts
+between nodes and memory addresses(sic).
+
+Notes:
+
+- Actually python has support for low-level memory operations, I implemented them
+  without problem and requiring only a minimal hack. The problem is that gc will free
+  any non referenced object. The solution is to attach a self-reference to each node.
+  The tradeof is having to delete this self-reference on removing the node, but it's
+  way cleaner than messing with how gc operates or stoping gc altogheter.
+
+- I am not implementing the interfaces as fuctions but as methods.
+
+- `List.add` is not Pythonic, I called it `List.append`
+
+- I added the `List.__iter__` method to allow coversion to list to better test.
+
+- There is a iterative and a recursive implementation of traversing in this
+  implementation, this is on purpose; I wanted to try both approaches.
+
+Solution:
+- [tests](tests/test__xor_list.py)
+- [implementation](src/xor_list.py)
