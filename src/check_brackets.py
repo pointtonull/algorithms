@@ -8,6 +8,14 @@ def are_matching(left, right):
 
 
 def find_mismatch(text: str) -> int:
+    """Check brackets
+    
+    Args:
+        text: The text to be validated.
+    
+    Returns:
+        The pos of the first error, 0 if there is no error.
+    """
     opening_brackets_stack = []
     for pos, char in enumerate(text, 1):
         if char in "([{":
