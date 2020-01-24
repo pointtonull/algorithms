@@ -1,4 +1,4 @@
-# Algorithms
+# Data Structures
 
 ## Check brackets in the code
 
@@ -195,3 +195,21 @@ Notes:
 Solution:
 - [tests](tests/test__xor_list.py)
 - [implementation](src/xor_list.py)
+
+
+## Uncertain Decoder
+
+This problem was asked by Facebook.
+
+Given the mapping a = 1, b = 2, ... z = 26, and an encoded message, count the
+number of ways it can be decoded.
+
+For example, the message '111' would give 3, since it could be decoded as 'aaa',
+'ka', and 'ak'.
+
+You can assume that the messages are decodable. For example, '001' is not
+allowed.
+
+Solution:
+- [tests](tests/test__uncertain_decoder.py)
+- [implementation](src/uncertain_decoder.py)
