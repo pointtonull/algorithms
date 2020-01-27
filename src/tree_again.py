@@ -66,7 +66,7 @@ def serialize(tree, indent=0):
         return INDENTATION * indent + "None"
     return "\n".join(
         (
-            INDENTATION * indent + tree.val,
+            INDENTATION * indent + str(tree.val),
             serialize(tree.left, indent + 1),
             serialize(tree.right, indent + 1),
         )
