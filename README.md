@@ -241,7 +241,7 @@ Solution:
 - [implementation](src/universal_trees.py)
 
 
-## Largest Adjacent Sum
+## Largest Non-Adjacent Sum
 
 This problem was asked by Airbnb.
 

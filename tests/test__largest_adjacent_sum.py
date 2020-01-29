@@ -5,7 +5,7 @@ from utils import deep_diff
 from src.largest_adjacent_sum import largest_adjacent_sum
 
 """
-LARGEST ADJACENT SUM
+LARGEST NON-ADJACENT SUM
 
 This problem was asked by Airbnb.
 
