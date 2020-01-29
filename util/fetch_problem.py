@@ -82,13 +82,13 @@ def main():
 
     print(problem_description)
 
-    IPython.embed()
+    # IPython.embed()
     extra_context = {"problem_description": problem_description}
-    # cookiecutter("problem_template", extra_context=extra_context)
+    cookiecutter("problem_template", extra_context=extra_context)
 
-    # update = messages.modify(userId="me", id=next_message_id,
-    #                          body={"removeLabelIds": ["INBOX"]})
-    # update.execute()
+    update = messages.modify(userId="me", id=next_message_id,
+                             body={"removeLabelIds": ["INBOX"]})
+    update.execute()
 
 
 if __name__ == "__main__":
