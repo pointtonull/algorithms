@@ -244,6 +244,7 @@ Solution:
 ## Largest Non-Adjacent Sum
 
 This problem was asked by Airbnb.
+Dificulty: Hard
 
 Given a list of integers, write a function that returns the largest sum of
 non-adjacent numbers. Numbers can be 0 or negative.
@@ -256,3 +257,20 @@ Follow-up: Can you do this in O(N) time and constant space?
 Solution:
 - [tests](tests/test__largest_adjacent_sum.py)
 - [implementation](src/largest_adjacent_sum.py)
+
+
+## Simple Job Scheduler
+
+This problem was asked by Apple.
+Dificulty: Medium
+
+Implement a job scheduler which takes in a function f and an integer n, andcalls f
+after n milliseconds.
+
+N.B.: I guess this is more of a challenge in less modern languages..., still, I
+decided to keep the high level implementation in Python because this in one of the
+overseen modules in the standar library.
+
+Solution:
+- [tests](tests/test__simple_job_scheduler.py)
+- [implementation](src/simple_job_scheduler.py)
