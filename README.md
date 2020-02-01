@@ -171,17 +171,17 @@ XOR of the next node and the previous node. Implement an XOR linked list; it has
 an add(element) which adds the element to the end, and a get(index) which
 returns the node at index.
 
-If using a language that has no pointers (such as Python), you can assume you
+If using a language that has no pointers (such as Python)(sic), you can assume you
 have access to get_pointer anddereference_pointer functions that converts
 between nodes and memory addresses(sic).
 
 Notes:
 
 - Actually python has support for low-level memory operations, I implemented them
-  without problem and requiring only a minimal hack. The problem is that gc will free
-  any non referenced object. The solution is to attach a self-reference to each node.
-  The tradeof is having to delete this self-reference on removing the node, but it's
-  way cleaner than messing with how gc operates or stoping gc altogheter.
+without problem and requiring only a minimal hack; gc will free any non referenced
+object. The solution is to attach a self-reference to each node. The tradeof is
+having to delete this self-reference on removing the node, but it's way cleaner than
+messing with how gc operates or stoping gc altogheter.
 
 - I am not implementing the interfaces as fuctions but as methods.
 
@@ -264,7 +264,7 @@ Solution:
 This problem was asked by Apple.
 Dificulty: Medium
 
-Implement a job scheduler which takes in a function f and an integer n, andcalls f
+Implement a job scheduler which takes in a function `f` and an integer n, and calls f
 after n milliseconds.
 
 N.B.: I guess this is more of a challenge in less modern languages..., still, I
