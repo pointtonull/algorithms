@@ -18,6 +18,7 @@ between nodes and memory addresses(sic).
 * actually python has support for low-level memory operations
 """
 
+
 def test__XORList__signature():
     xorlist = XORList()
 
@@ -31,7 +32,7 @@ def test__XORList__examples():
 
     for lenght, item in enumerate(items):
         assert len(xorlist) == lenght
-        assert xorlist.append(item) == None
+        assert xorlist.append(item) is None
         assert len(xorlist) == lenght + 1
 
     for pos, item in enumerate(items):
