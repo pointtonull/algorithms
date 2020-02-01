@@ -9,10 +9,10 @@ def are_matching(left, right):
 
 def find_mismatch(text: str) -> int:
     """Check brackets
-    
+
     Args:
         text: The text to be validated.
-    
+
     Returns:
         The pos of the first error, 0 if there is no error.
     """
@@ -34,7 +34,7 @@ def find_mismatch(text: str) -> int:
 
 
 def main():
-    text = input()
+    text = input()  # nosec (safe in Python3)
     mismatch = find_mismatch(text)
     if not mismatch:
         print("Success")
