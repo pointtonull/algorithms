@@ -31,16 +31,3 @@ def find_mismatch(text: str) -> int:
         if opening_brackets_stack:
             return opening_brackets_stack[-1][0]
         return 0
-
-
-def main():
-    text = input()  # nosec (safe in Python3)
-    mismatch = find_mismatch(text)
-    if not mismatch:
-        print("Success")
-    else:
-        print(mismatch)
-
-
-if __name__ == "__main__":
-    main()
