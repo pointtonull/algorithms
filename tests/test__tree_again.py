@@ -46,3 +46,4 @@ def test__serialize__examples():
     assert tree == tree_again
     assert tree_again.left.left.val == 'left.left'
 
+    assert tree_again != pickled

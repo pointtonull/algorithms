@@ -267,9 +267,9 @@ Dificulty: Medium
 Implement a job scheduler which takes in a function `f` and an integer n, and calls f
 after n milliseconds.
 
-N.B.: I guess this is more of a challenge in less modern languages..., still, I
-decided to keep the high level implementation in Python because this in one of the
-overseen modules in the standar library.
+N.B.: I guess this is more of a challenge in other languages..., still, I decided to
+keep the high level implementation in Python because this in one of the most
+overseenmodules in the standar library.
 
 Solution:
 - [tests](tests/test__simple_job_scheduler.py)

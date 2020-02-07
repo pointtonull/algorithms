@@ -100,7 +100,7 @@ class XORList:
 
     def __getitem__(self, index):
         """Dunder for xorlist[n]
-        
+
         Returns: element in nth position of the list
 
         Raises:

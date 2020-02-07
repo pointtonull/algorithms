@@ -30,7 +30,3 @@ def find_the_gap(numbers):  # O(n) time, O(1) space
             return pos + 1
     else:
         return len(numbers) + 1
-
-
-if __name__ == "__main__":
-    find_the_gap([3, 4, -6, -1])

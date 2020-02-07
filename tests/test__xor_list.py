@@ -1,3 +1,5 @@
+from pytest import raises
+
 from src.xor_list import XORList
 
 """
@@ -39,3 +41,13 @@ def test__XORList__examples():
         assert xorlist[pos] == item
 
     assert list(xorlist) == items
+
+
+def test__XORList__limits():
+    xorlist = XORList()
+    xorlist.append(1)
+    with raises(NotImplementedError):
+        xorlist[-1]
+
+    with raises(IndexError):
+        xorlist[1]

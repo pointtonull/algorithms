@@ -35,4 +35,4 @@ debug: deps
 	$(PYTHON) -m pytest --stepwise -vv --pdb $(TESTS)
 
 coverage: deps
-	$(PYTHON) -m pytest tests --cov $(SRC) --cov-report=term-missing tests
+	$(PYTHON) -m pytest tests --cov $(SRC) --cov-report=term-missing:skip-covered tests
