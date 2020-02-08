@@ -1,3 +1,6 @@
+This is a complete coverage plaground repo I use as template for my tdd projects and
+I maintain updated solving popular coding challenges once in a while.
+
 # Data Structures
 
 ## Check brackets in the code
@@ -274,3 +277,29 @@ overseenmodules in the standar library.
 Solution:
 - [tests](tests/test__simple_job_scheduler.py)
 - [implementation](src/simple_job_scheduler.py)
+
+
+## Staircase Silly Walks
+
+This problem was asked by Amazon.
+Dificulty: Hard
+
+There exists a staircase with N steps, and you can climb up either 1 or 2 steps at a
+time. Given N, write a function that returns the number of unique ways you can climb
+the staircase. The order of the steps matters.
+
+For example, if N is 4, then there are 5 unique ways:
+
+- 1, 1, 1, 1
+- 2, 1, 1
+- 1, 2, 1
+- 1, 1, 2
+- 2, 2
+
+What if, instead of being able to climb 1 or 2 steps at a time, you could climb any
+number from a set of positive integers X?
+For example, if X = {1, 3, 5}, you could climb 1, 3, or 5 steps at a time.
+
+Solution:
+- [tests](tests/test__staircase_silly_walks.py)
+- [implementation](src/staircase_silly_walks.py)

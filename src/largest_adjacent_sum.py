@@ -15,5 +15,5 @@ def largest_adjacent_sum(numbers):  # O(n) time, O(1) space
         new_exclude = max(include, exclude)
         include = exclude + current
         exclude = new_exclude
-        
+
     return max(include, exclude)
