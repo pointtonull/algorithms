@@ -1,4 +1,13 @@
 def _get_climb_combinations(steps, leaps):
+    """Recursive generation for the combinations"""
+    for leap in leaps:
+        if leap == steps:
+            yield 1
+        elif leap < steps:
+            yield from _get_climb_combinations(steps - leap, leaps)
+
+
+def get_climb_combinations(steps, leaps):
     """
     STAIRCASE SILLY WALKS
 
@@ -20,12 +29,4 @@ def _get_climb_combinations(steps, leaps):
     number from a set of positive integers X?
     For example, if X = {1, 3, 5}, you could climb 1, 3, or 5 steps at a time.
     """
-    for leap in leaps:
-        if leap == steps:
-            yield 1
-        elif leap < steps:
-            yield from _get_climb_combinations(steps - leap, leaps)
-
-
-def get_climb_combinations(steps, leaps):
     return sum(_get_climb_combinations(steps, leaps))
