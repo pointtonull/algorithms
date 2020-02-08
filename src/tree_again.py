@@ -78,7 +78,12 @@ def deserialize(pickled):
         return None
     else:
         match = RE_TREE.match(pickled)
-        val = match["val"]
-        left = deserialize(dedent(match["left"]))
-        right = deserialize(dedent(match["right"]))
+        if match:
+            val = match["val"]
+            left = deserialize(dedent(match["left"]))
+            right = deserialize(dedent(match["right"]))
+        else:
+            val = pickled
+            left = None
+            right = None
         return Node(val, left, right)
