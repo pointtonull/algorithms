@@ -19,6 +19,11 @@ CASES = [
         "leaps": {1, 2},
         "answer": 5,
     },
+    {
+        "steps": 5,
+        "leaps": {1, 2, 5},
+        "answer": 9,
+    },
 ]
 
 
