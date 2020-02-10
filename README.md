@@ -303,3 +303,21 @@ For example, if X = {1, 3, 5}, you could climb 1, 3, or 5 steps at a time.
 Solution:
 - [tests](tests/test__staircase_silly_walks.py)
 - [implementation](src/staircase_silly_walks.py)
+
+
+## Autocomplete System
+
+This problem was asked by Twitter.
+Dificulty: Medium
+
+Implement an autocomplete system. That is, given a query string s and a set ofall
+possible query strings, return all strings in the set that have s as aprefix. For
+example, given the query string de and the set of strings [dog, deer, deal], return
+[deer, deal].
+
+Hint: Try preprocessing the dictionary into a more efficient data structure tospeed
+up queries.
+
+Solution:
+- [tests](tests/test__autocomplete_system.py)
+- [implementation](src/autocomplete_system.py)

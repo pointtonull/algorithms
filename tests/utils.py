@@ -16,6 +16,8 @@ def deep_diff(left, right, keys=[], order=True):
                 return diff
 
     elif isinstance(left, list):
+        if len(left) != len(right):
+            return f"Different lenghts: {len(left)} != {len(right)}"
         if not order:
             left = sorted(left)
             right = sorted(right)
