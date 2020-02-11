@@ -321,3 +321,16 @@ up queries.
 Solution:
 - [tests](tests/test__autocomplete_system.py)
 - [implementation](src/autocomplete_system.py)
+
+
+## Memory Efficient Random
+
+This problem was asked by Facebook.
+Dificulty: Medium
+
+Given a stream of elements too large to store in memory, pick a random elementfrom
+the stream with uniform probability.
+
+Solution:
+- [tests](tests/test__memory_efficient_random.py)
+- [implementation](src/memory_efficient_random.py)

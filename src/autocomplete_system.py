@@ -16,9 +16,6 @@ class Trie:
             head, tail = symbol[0], symbol[1:]
             self.buckets[head].add(tail)
 
-    def __repr__(self):
-        return f"Trie({list(self.buckets.keys())}..)"
-
     def _all_leaves(self):
         if self.terminal:
             yield ""
