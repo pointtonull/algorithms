@@ -334,3 +334,15 @@ the stream with uniform probability.
 Solution:
 - [tests](tests/test__memory_efficient_random.py)
 - [implementation](src/memory_efficient_random.py)
+
+
+## Monte Carlo Pi
+
+This problem was asked by Google.
+Dificulty: Medium
+
+The area of a circle is defined as πr^2. Estimate π to 3 decimal places using aMonte Carlo method.Hint: The basic equation of a circle is x2 + y2 = r2.
+
+Solution:
+- [tests](tests/test__monte_carlo_pi.py)
+- [implementation](src/monte_carlo_pi.py)
