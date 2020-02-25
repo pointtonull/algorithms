@@ -1,51 +1,35 @@
-def total_lenght(words):
+from math import ceil
+
+
+def total_length(words):
     chars = sum(len(word) for word in words)
     word_sep = max(0, len(words) - 1)
     return chars + word_sep
 
 
-def justify_line(words, lenght=40):
-    total = total_lenght(words)
-    if lenght < total_lenght:
-        raise ValueError(f"words' total lenght is greater than allowed lenght.")
-    extra_spaces = lenght - total
+def justify_line(words, length=40):
+    spaces = length - sum(len(word) for word in words)
+    line = ""
+    while words:
+        word = words.pop(0)
+        line += word
+        if words:
+            sep = ceil(spaces / len(words))
+            line += sep * " "
+            spaces -= sep
+    return line
 
 
-
-def justify(words, lenght=40):
-    """JUSTIFY
-
-    Write an algorithm to justify text. Given a sequence of words and an integerline
-    length k, return a list of strings which represents each line,
-    fully justified.
-
-    More specifically, you should have as many words as possible in each line.
-    Thereshould be at least one space between each word. Pad extra spaces when
-    necessary so that each line has exactly length k. Spaces should be distributed as
-    equally as possible, with the extra spaces, if any, distributed starting from the
-    left. If you can only fit one word on a line, then you should pad the right-hand
-    sidewith spaces. Each word is guaranteed not to be longer than k.
-
-    For example:
-        words = ["the", "quick", "brown", "fox", "jumps","over", "the", "lazy", "dog"]
-        k = 16
-        you should return the following:
-            [
-                "the  quick brown",  # 1 extra space on the left
-                "fox  jumps  over",  # 2 extra spaces distributed evenly
-                "the   lazy   dog",  # 4 extra spaces distributed evenly
-            ]
-    """
-
+def justify(words, length=40):
     result = []
     current_line = []
 
     for word in words:
-        new_lenght = total_lenght(current_line) + len(word) + 1
-        if lenght < new_lenght:
-            result.append(current_line)
+        new_length = total_length(current_line) + len(word) + 1
+        if length < new_length:
+            result.append(justify_line(current_line, length))
             current_line = []
         current_line.append(word)
 
-    result.append(current_line)
+    result.append(justify_line(current_line, length))
     return result

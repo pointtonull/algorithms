@@ -1,7 +1,9 @@
 import string
+from typing import List
 from functools import reduce
 from operator import mul
 from collections import defaultdict
+
 
 LETTER_PRIME = dict(
     zip(
@@ -15,7 +17,26 @@ LETTER_PRIME = dict(
     )
 )
 
-def anagram_hash(word):
+
+# def hash_anagram(word) -> str:  # Ω(k log k)
+#     return "".join(sorted(word))
+
+
+# def group_anagrams_primes(words: List[str]) -> List[List[str]]:  # O(n)
+#     """
+#     Given a collection of words, return a list of lists where each inner list
+#     contains all anagrams.
+#
+#     >>> group_anagrams(["god", "dog", "good", "cat"])
+#     [["god", "dog"], ["good"], ["cat"]]
+#     """
+#     groups = defaultdict(list)
+#     for word in words:  # O(n)
+#         groups[hash_anagram(word)].append(word)  # Ω(k log k)
+#     return list(groups.values())
+
+
+def anagram_hash(word: list) -> int:  # O(k)
     """
     > anagram_hash('cat')
     710
@@ -26,14 +47,14 @@ def anagram_hash(word):
     > anagram_hash('Nan' * 10 + Batman)
     28470819877476016224161459901545001110315528646656
     """
-    return reduce(mul, (LETTER_PRIME[c] for c in word))
+    return reduce(mul, (LETTER_PRIME[c] for c in word))  # Ω(k)
 
 
 # Now you have a O(1) hash function you use the map approach
 # No further change is required since in python hash(integer) == integer
 
 
-def group_anagrams(words):  # O(n)
+def group_anagrams_sorted(words: List[str]) -> List[List[str]]:  # O(n)
     """
     Given a list of strings, write a function to return all subsets of the strings
     that are anagrams (e.g. "rope" == "pore", "fairy tales" == "rail safety").
@@ -52,4 +73,12 @@ def group_anagrams(words):  # O(n)
     return list(groups.values())  # O(n)
 
 
-print(group_anagrams(["apple", "rope", "cat", "tac", "atc", "pore"]))
+def group_anagrams(words: list) -> list:
+    """
+    Given a collection of words, return a list of lists where each inner list
+    contains all anagrams.
+
+    >>> group_anagrams(["god", "dog", "good", "cat"])
+    [["god", "dog"], ["good"], ["cat"]]
+    """
+    return group_anagrams_sorted(words)

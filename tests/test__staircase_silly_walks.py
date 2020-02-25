@@ -47,4 +47,3 @@ def test__get_climb_combinations__examples(case):
 
     result = get_climb_combinations(steps, leaps)
     assert answer == result
-

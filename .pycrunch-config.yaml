@@ -1,0 +1,10 @@
+discovery:
+  exclusions:
+  - ignored_folder/
+  - problem_template/
+  - util/
+engine:
+  runtime: pytest
+  cpu-cores: 4
+env:
+  PYTHONPATH: ./
