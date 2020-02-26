@@ -399,8 +399,7 @@ For example:
         2 in the second, and 3 in the fourth index (we cannot hold 5 since it
         would run off to the left), so we can trap 8 units of water.
 
-I did a recursive implementation of the most efficient algorithm. Which is
-marginally less efficient but way easier to read.
+I added a stress test case fixture to ensure compliance in large arrays.
 
 Solution:
 - [tests](tests/test__after_the_rain.py)

@@ -1,6 +1,11 @@
+from random import Random
+
 from pytest import fixture
 
-from src.after_the_rain import after_the_rain
+from src.after_the_rain import after_the_rain_naive, after_the_rain
+
+random = Random(0)
+
 
 CASES = [
     {
@@ -31,12 +36,23 @@ CASES = [
         "heights": [0, 1, 2, 3],
         "answer": 0,
     },
+    {
+        "heights": [6, 0, 5, 4, 5],
+        "answer": 6,
+    },
 ]
 
 
 @fixture(params=CASES)
 def case(request):
     return request.param
+
+
+@fixture(params=range(200))
+def stress_case(request):
+    heights = [random.randrange(10) for _ in range(request.param)]
+    answer = after_the_rain_naive(heights)
+    yield {"heights": heights, "answer": answer}
 
 
 def test__after_the_rain__signature(case):
@@ -52,3 +68,22 @@ def test__after_the_rain__examples(case):
 
     result = after_the_rain(heights)
     assert answer == result
+
+
+def test__after_the_rain_naive__examples(case):
+    heights = case["heights"]
+    answer = case["answer"]
+
+    result = after_the_rain_naive(heights)
+
+    assert answer == result
+
+
+def test__after_the_rain__stress(stress_case):
+    heights = stress_case["heights"]
+    answer = stress_case["answer"]
+
+    result = after_the_rain(heights)
+
+    assert answer == result
+
