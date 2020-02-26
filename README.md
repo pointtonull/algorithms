@@ -443,3 +443,15 @@ assume the string to be decoded is valid.
 Solution:
 - [tests](tests/test__run_lenght_encoding.py)
 - [implementation](src/run_lenght_encoding.py)
+
+
+## Balance Parenthesis
+
+This problem was asked by Facebook.
+Difficulty: Easy
+
+Given a string of round, curly, and square open and closing brackets, returnwhether the brackets are balanced (well-formed).For example, given the string "([])[]({})", you should return true.Given the string "([)]" or "((()", you should return false.
+
+Solution:
+- [tests](tests/test__balance_parenthesis.py)
+- [implementation](src/balance_parenthesis.py)
