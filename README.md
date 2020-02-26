@@ -404,3 +404,22 @@ I added a stress test case fixture to ensure compliance in large arrays.
 Solution:
 - [tests](tests/test__after_the_rain.py)
 - [implementation](src/after_the_rain.py)
+
+
+## Edit Distance
+
+This problem was asked by Google.
+Difficulty: Easy
+
+The edit distance between two strings refers to the minimum number of character
+insertions, deletions, and substitutions required to change one string to the
+other.
+
+For example, the edit distance between “kitten” and “sitting” is three:
+substitute the “k” for “s”, substitute the “e” for “i”, and append a “g”.
+
+Given two strings, compute the edit distance between them.
+
+Solution:
+- [tests](tests/test__edit_distance.py)
+- [implementation](src/edit_distance.py)
