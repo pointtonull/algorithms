@@ -1,4 +1,4 @@
-This is a complete coverage plaground repo I use as template for my tdd projects and
+This is a complete coverage playground repo I use as template for my tdd projects and
 I maintain updated solving popular coding challenges once in a while.
 
 # Data Structures
@@ -247,7 +247,7 @@ Solution:
 ## Largest Non-Adjacent Sum
 
 This problem was asked by Airbnb.
-Dificulty: Hard
+Difficulty: Hard
 
 Given a list of integers, write a function that returns the largest sum of
 non-adjacent numbers. Numbers can be 0 or negative.
@@ -265,7 +265,7 @@ Solution:
 ## Simple Job Scheduler
 
 This problem was asked by Apple.
-Dificulty: Medium
+Difficulty: Medium
 
 Implement a job scheduler which takes in a function `f` and an integer n, and calls f
 after n milliseconds.
@@ -282,7 +282,7 @@ Solution:
 ## Staircase Silly Walks
 
 This problem was asked by Amazon.
-Dificulty: Hard
+Difficulty: Hard
 
 There exists a staircase with N steps, and you can climb up either 1 or 2 steps at a
 time. Given N, write a function that returns the number of unique ways you can climb
@@ -308,7 +308,7 @@ Solution:
 ## Autocomplete System
 
 This problem was asked by Twitter.
-Dificulty: Medium
+Difficulty: Medium
 
 Implement an autocomplete system. That is, given a query string s and a set ofall
 possible query strings, return all strings in the set that have s as aprefix. For
@@ -326,7 +326,7 @@ Solution:
 ## Memory Efficient Random
 
 This problem was asked by Facebook.
-Dificulty: Medium
+Difficulty: Medium
 
 Given a stream of elements too large to store in memory, pick a random elementfrom
 the stream with uniform probability.
@@ -339,7 +339,7 @@ Solution:
 ## Monte Carlo Pi
 
 This problem was asked by Google.
-Dificulty: Medium
+Difficulty: Medium
 
 The area of a circle is defined as πr^2. Estimate π to 3 decimal places using a Monte Carlo method.
 
@@ -353,7 +353,7 @@ Solution:
 ## Justify
 
 This problem was asked by Palantir.
-Dificulty: Medium
+Difficulty: Medium
 
 Write an algorithm to justify text. Given a sequence of words and an integerline
 length k, return a list of strings which represents each line, fully justified.
@@ -378,3 +378,30 @@ For example:
 Solution:
 - [tests](tests/test__justify.py)
 - [implementation](src/justify.py)
+
+
+## After The Rain
+
+This problem was asked by Facebook.
+Difficulty: Medium
+
+You are given an array of non-negative integers that represents a
+two-dimensional elevation map where each element is unit-width wall and the
+integer is the height. Suppose it will rain and all spots between two walls get
+filled up.
+
+Compute how many units of water remain trapped on the map in O(N) time and O(1)
+space.
+
+For example:
+    - given the input [2, 1, 2], we can hold 1 unit of water in the middle.
+    - given the input [3, 0, 1, 3, 0, 5], we can hold 3 units in the first index,
+        2 in the second, and 3 in the fourth index (we cannot hold 5 since it
+        would run off to the left), so we can trap 8 units of water.
+
+I did a recursive implementation of the most efficient algorithm. Which is
+marginally less efficient but way easier to read.
+
+Solution:
+- [tests](tests/test__after_the_rain.py)
+- [implementation](src/after_the_rain.py)
