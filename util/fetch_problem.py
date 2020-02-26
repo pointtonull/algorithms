@@ -75,9 +75,9 @@ def main():
     )
     match = re.search(r"\[(\w+)\]$", subject)
     if match:
-        dificulty = match.group(1)
+        difficulty = match.group(1)
         lines = problem_description.splitlines()
-        lines[0] = f"{lines[0]}\nDificulty: {dificulty}\n\n"
+        lines[0] = f"{lines[0]}\nDifficulty: {difficulty}\n\n"
         problem_description = "".join(lines)
 
     print(problem_description)
