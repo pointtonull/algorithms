@@ -23,7 +23,6 @@ def is_balanced(text):
     Given the string "([)]" or "((()", you should return false.
     """
     stack = deque()
-    result = True
     for char in text:
         if char not in BRACES:
             continue
@@ -31,7 +30,7 @@ def is_balanced(text):
             stack.append(char)
         else:
             pair = stack.pop()
-            if not are_matching(char, pair):
+            if not are_matching(pair, char):
                 return False
     else:
         if stack:
