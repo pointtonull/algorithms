@@ -29,7 +29,6 @@ CASES = [
 ]
 
 
-
 @fixture(params=CASES)
 def case(request):
     return request.param
@@ -48,4 +47,3 @@ def test__is_balanced__examples(case):
 
     result = is_balanced(text)
     assert answer == result
-
