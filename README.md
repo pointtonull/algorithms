@@ -450,8 +450,29 @@ Solution:
 This problem was asked by Facebook.
 Difficulty: Easy
 
-Given a string of round, curly, and square open and closing brackets, returnwhether the brackets are balanced (well-formed).For example, given the string "([])[]({})", you should return true.Given the string "([)]" or "((()", you should return false.
+Given a string of round, curly, and square open and closing brackets, return
+whether the brackets are balanced (well-formed).
+
+For example, given the string "([])[]({})", you should return true.
+Given the string "([)]" or "((()", you should return false.
 
 Solution:
 - [tests](tests/test__balance_parenthesis.py)
 - [implementation](src/balance_parenthesis.py)
+
+
+
+## Currency Arbitrage
+
+This problem was asked by Jane Street.
+Difficulty: Hard
+
+Suppose you are given a table of currency exchange rates, represented as a 2D
+array. Determine whether there is a possible arbitrage: that is, whether there
+is some sequence of trades you can make, starting with some amount A of any
+currency, so that you can end up with some amount greater than A of that currency.
+There are no transaction costs and you can trade fractional quantities.
+
+Solution:
+- [tests](tests/test__currency_arbitrage.py)
+- [implementation](src/currency_arbitrage.py)
