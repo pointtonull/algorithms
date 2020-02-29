@@ -533,3 +533,36 @@ The same regular expression on the string "chats" should return False.
 Solution:
 - [tests](tests/test__regexs.py)
 - [implementation](src/regexs.py)
+
+
+
+
+## Maze
+
+This problem was asked by Google.
+Difficulty: Easy
+
+You are given an M by N matrix consisting of booleans that represents a board.
+Each True boolean represents a wall. Each False boolean represents a tile you
+can walk on.
+
+Given this matrix, a start coordinate, and an end coordinate, return the minimum
+number of steps required to reach the end coordinate from the start. If there is
+no possible path, then return None. You can move up, left, down, and right. You
+cannot move through walls. You cannot wrap around the edges of the board.
+
+For example, given the following board:
+``` Python
+    [[0, 0, 0, 0],
+     [1, 1, 0, 1],
+     [0, 0, 0, 0],
+     [0, 0, 0, 0]]
+```
+
+and start = (3, 0) (bottom left) and end = (0, 0) (top left), the minimum number
+of steps required to reach the end is 7, since we would need to go through (1,2)
+because there is a wall everywhere else on the second row.
+
+Solution:
+- [tests](tests/test__maze.py)
+- [implementation](src/maze.py)
