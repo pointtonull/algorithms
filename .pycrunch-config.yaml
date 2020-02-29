@@ -5,5 +5,5 @@ discovery:
 engine:
   runtime: pytest
 env:
-  PYTHONPATH: ./
+  PYTHONPATH: ./, tests
   PYTEST_ADDOPTS: -x
