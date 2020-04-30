@@ -33,7 +33,7 @@ GROUP_ANAGRAMS_CASES = [
     {
         "words": ["cod", "dog", "cat", "tac", "know", "care"],
         "grouped_anagrams": [["cod"], ["dog"], ["cat", "tac"], ["know"], ["care"]],
-    }
+    },
 ]
 
 
