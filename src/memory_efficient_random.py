@@ -15,4 +15,6 @@ def memory_efficient_random(elements):
         probability = 1 / total
         if random.random() <= probability:
             choosen = element
+        else:
+            choose = random.choice(elements)
     return choosen

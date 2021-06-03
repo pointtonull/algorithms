@@ -23,16 +23,16 @@ ipython: deps
 	$(PYTHON) -m IPython
 
 unit test: deps
-	$(PYTHON) -m pytest tests
+	$(PYTHON) -m pytest $(TESTS)
 
-tdd: deps
-	$(PYTHON) -m pytest --stepwise $(TESTS)
+tdd: deps ## run tests on filesystem events
+	ptw $(SRC) $(TESTS) --runner "$(PYTHON) -m pytest --stepwise $(TESTS)"
 
 new: test
 	$(PYTHON) util/fetch_problem.py
 
-debug: deps
-	$(PYTHON) -m pytest --stepwise -vv --pdb $(TESTS)
+debug: deps ## run tests on filesystem events, open pdb on failures
+	ptw $(SRC) $(TESTS) --pdb --runner "$(PYTHON) -m pytest --stepwise $(TESTS)"
 
 coverage: deps
 	$(PYTHON) -m pytest tests --cov $(SRC) --cov-report=term-missing:skip-covered tests

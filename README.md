@@ -566,3 +566,57 @@ because there is a wall everywhere else on the second row.
 Solution:
 - [tests](tests/test__maze.py)
 - [implementation](src/maze.py)
+
+
+## Sum Of Even Fibonacci Numbers
+
+Efficient implementation of serie of partial sum of even fibonacci numbers.
+
+Solution:
+- [tests](tests/test__sum_of_even_fibonacci_numbers.py)
+- [implementation](src/sum_of_even_fibonacci_numbers.py)
+
+
+## Repeated In Sorted Arrays
+
+Write a function in a language of your choice which, when passed two sorted
+
+Solution:
+- [tests](tests/test__   arrays of integers returns an array of any numbers which appear in both. No.py)
+- [implementation](src/   arrays of integers returns an array of any numbers which appear in both. No.py)
+
+
+## No_Odd_Digits
+
+Write a function in a language of your choice which, when passed a positive integer returns true if the decimal representation of that integer contains no odd digits and otherwise returns false.
+
+Solution:
+- [tests](tests/test__no_odd_digits.py)
+- [implementation](src/no_odd_digits.py)
+
+
+## Multiplier
+
+Write a function in a language of your choice which, when passed a decimal digit X, returns the value of X+XX+XXX+XXXX. E.g. if the supplied digit is 3 it should return 3702 (3+33+333+3333).
+
+Solution:
+- [tests](tests/test__multiplier.py)
+- [implementation](src/multiplier.py)
+
+
+## Multiples_Generator
+
+Define a generator which generates the positive integers up to and including a supplied value which are divisible by another supplied positive integer and use it to calculate the sum of all positive integers less than 102030 which are divisible by 3
+
+Solution:
+- [tests](tests/test__multiples_generator.py)
+- [implementation](src/multiples_generator.py)
+
+
+## Nested_Lists
+
+Write a function which is passed an integer, n, and returns a list of n lists such that
+
+Solution:
+- [tests](tests/test__nested_lists.py)
+- [implementation](src/nested_lists.py)
