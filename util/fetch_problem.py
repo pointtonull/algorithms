@@ -18,8 +18,12 @@ def main():
     """
     creds = None
     if os.path.exists("token.pickle"):
-        with open("token.pickle", "rb") as token:
-            creds = pickle.load(token)
+        # if the file is old, delete it
+        if os.path.getmtime("token.pickle") < os.path.getmtime("credentials.json"):
+            os.remove("token.pickle")
+        else:
+            with open("token.pickle", "rb") as token:
+                creds = pickle.load(token)
 
     if not creds or not creds.valid:
         if creds and creds.expired and creds.refresh_token:
