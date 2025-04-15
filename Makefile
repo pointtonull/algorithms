@@ -26,7 +26,7 @@ unit test: deps
 	$(PYTHON) -m pytest $(TESTS)
 
 tdd: deps ## run tests on filesystem events
-	ptw $(SRC) $(TESTS) --runner "$(PYTHON) -m pytest --stepwise $(TESTS)"
+	ptw $(SRC) $(TESTS) --runner "$(PYTHON) -m pytest --capture=fd --stepwise --tb=short $(TESTS)"
 
 new: test
 	$(PYTHON) util/fetch_problem.py
