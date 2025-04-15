@@ -620,3 +620,16 @@ Write a function which is passed an integer, n, and returns a list of n lists su
 Solution:
 - [tests](tests/test__nested_lists.py)
 - [implementation](src/nested_lists.py)
+
+
+## Sort Colors Rgb
+
+Given an array of strictly the characters 'R', 'G', and 'B', segregate
+thevalues of the array so that all the Rs come first, the Gs come second, and
+theBs come last. You can only swap elements of the array.Do this in linear time
+and in-place.For example, given the array ['G', 'B', 'R', 'R', 'B', 'R', 'G'],
+it shouldbecome ['R', 'R', 'R', 'G', 'G', 'B', 'B'].]: sort_colors_rgb
+
+Solution:
+- [tests](tests/test__sort_colors_rgb.py)
+- [implementation](src/sort_colors_rgb.py)
