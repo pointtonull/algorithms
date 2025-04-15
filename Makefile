@@ -36,3 +36,16 @@ debug: deps ## run tests on filesystem events, open pdb on failures
 
 coverage: deps
 	$(PYTHON) -m pytest tests --cov $(SRC) --cov-report=term-missing:skip-covered tests
+
+help:  ## Show this help message
+	@echo "\033[1mUsage:\033[0m"
+	@echo "  make [target]\n"
+	@echo "\033[1mTargets:\033[0m"
+	@awk -F ":.*?## " -v und="\033[2mundocumented\033[0m" '\
+		/^[A-z][^:\t ]+:/&&NF==2{\
+			printf "  \033[36m%-12s\033[0m %s\n", $$1, $$2 | "sort"\
+		}\
+		/^[A-z][^:\t ]+:/&&NF==1{\
+			split($$1, a, ":");\
+			printf "  \033[36m%-12s\033[0m %s\n", a[1], und | "sort"\
+		}' $(MAKEFILE_LIST)
