@@ -42,7 +42,7 @@ test: deps
 # TDD
 
 tdd: deps
-    uv run ptw {{SRC}} {{TESTS}} --runner "uv run pytest --capture=fd --stepwise --tb=short {{TESTS}}"
+    {{PYTHON}} -m pytest {{TESTS}} --stepwise
 
 # Retrieve New Problem
 
@@ -52,7 +52,7 @@ new: test
 # Debug
 
 debug: deps
-    uv run ptw {{SRC}} {{TESTS}} --pdb --runner "uv run pytest --stepwise {{TESTS}}"
+    {{PYTHON}} -m pytest {{TESTS}} --stepwise --pdb
 
 # Coverage
 
