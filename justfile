@@ -7,6 +7,10 @@ PYTHON := "uv run python"
 REQUIREMENTS := SRC + "/requirements.txt"
 STAGE := "dev"
 
+# Default recipe - show help
+default:
+    @just help
+
 # Dependencies
 
 # Sync dependencies using uv
