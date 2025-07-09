@@ -4,7 +4,7 @@ VOWELS = "aeiouy"
 
 
 def translate(phrase):
-    """
+    r"""
     Stephan has a friend who happens to be a little mechbird. Recently, he was trying
     to teach it how to speak basic language. Today the bird spoke its first word:
     "hieeelalaooo". This sounds a lot like "hello", but with too many vowels. Stephan
@@ -27,7 +27,7 @@ def translate(phrase):
     Input: A bird phrase as a string.
     Output: The translation as a string.
 
-    Precondition: re.match("\A([a-z]+\ ?)+(?<!\ )\Z", phrase)
+    Precondition: r""re.match(r"\A([a-z]+\ ?)+(?<!\ )\Z", phrase)
     A phrase always has the translation. 
     """
     phrase = re.sub(fr"([{VOWELS}])\1\1", r"\1", phrase)
