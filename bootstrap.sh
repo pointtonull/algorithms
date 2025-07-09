@@ -25,6 +25,22 @@ function install_uv() {
     fi
 }
 
+function install_just() {
+    if command -v just >/dev/null 2>&1; then
+        info "just already installed"
+    else
+        info "Installing just (command runner)"
+        if command -v cargo >/dev/null 2>&1; then
+            cargo install just
+        elif command -v brew >/dev/null 2>&1; then
+            brew install just
+        else
+            warn "Neither cargo nor brew found. Please install 'just' manually."
+            return
+        fi
+    fi
+}
+
 function install_python_linux() {
     if ! command -v python3 >/dev/null 2>&1; then
         info "Installing Python"
@@ -59,6 +75,7 @@ case "$OS" in
 esac
 
 install_uv
+install_just
 
 info "Synchronizing dependencies with uv"
 uv sync
