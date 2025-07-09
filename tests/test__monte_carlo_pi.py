@@ -9,7 +9,7 @@ from src.monte_carlo_pi import monte_carlo_pi, primes
 MONTE CARLO PI
 
 This problem was asked by Google.
-Dificulty: Medium
+Difficulty: Medium
 
 The area of a circle is defined as πr^2. Estimate π to 3 decimal places using a Monte
 Carlo method.

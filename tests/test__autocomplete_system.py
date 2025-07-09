@@ -8,7 +8,7 @@ from src.autocomplete_system import autocomplete_system, Trie
 AUTOCOMPLETE SYSTEM
 
 This problem was asked by Twitter.
-Dificulty: Medium
+Difficulty: Medium
 
 Implement an autocomplete system. That is, given a query string s and a set of all
 possible query strings, return all strings in the set that have s as aprefix. For

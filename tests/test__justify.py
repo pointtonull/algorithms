@@ -6,7 +6,7 @@ from src.justify import justify, total_length, justify_line
 JUSTIFY
 
 This problem was asked by Palantir.
-Dificulty: Medium
+Difficulty: Medium
 
 Write an algorithm to justify text. Given a sequence of words and an integer line
 length k, return a list of strings which represents each line,
