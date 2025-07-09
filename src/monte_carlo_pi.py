@@ -22,7 +22,7 @@ def monte_carlo_pi(precision=4):
     """MONTE CARLO PI
 
     This problem was asked by Google.
-    Dificulty: Medium
+    Difficulty: Medium
 
     The area of a circle is defined as πr^2. Estimate π to 3 decimal places using a
     Monte Carlo method.

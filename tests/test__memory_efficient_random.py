@@ -8,7 +8,7 @@ from src.memory_efficient_random import memory_efficient_random
 MEMORY EFFICIENT RANDOM
 
 This problem was asked by Facebook.
-Dificulty: Medium
+Difficulty: Medium
 
 Given a stream of elements too large to store in memory, pick a random elementfrom
 the stream with uniform probability.
