@@ -1,5 +1,5 @@
 def encode(original):
-    """RUN-LENGHT ENCODING
+    """RUN-LENGTH ENCODING
 
     This problem was asked by Amazon.
     Difficulty: Easy
