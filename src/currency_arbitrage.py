@@ -10,7 +10,9 @@ def all_permutations(rates):
 def execute(sequence, rates):
     amount = 1
     current_symbol = sequence[0]
-    sequence = *sequence[1:], sequence[0]
+    # Rotate the sequence so that we continue converting using
+    # the next currency in line and finish back at the start.
+    sequence = (*sequence[1:], sequence[0])
     for next_symbol in sequence:
         rate = rates[current_symbol][next_symbol]
         amount *= rate
