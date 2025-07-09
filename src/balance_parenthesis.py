@@ -29,6 +29,8 @@ def is_balanced(text):
         if char in OPENING:
             stack.append(char)
         else:
+            if not stack:
+                return False
             pair = stack.pop()
             if not are_matching(pair, char):
                 return False

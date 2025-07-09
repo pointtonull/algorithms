@@ -26,6 +26,10 @@ CASES = [
         "text": "((()",
         "answer": False,
     },
+    {
+        "text": ")(",
+        "answer": False,
+    },
 ]
 
 
