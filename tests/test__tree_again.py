@@ -47,3 +47,13 @@ def test__serialize__examples():
     assert tree_again.left.left.val == 'left.left'
 
     assert tree_again != pickled
+
+
+def test__serialize__none():
+    result = serialize(None)
+    assert result == "None"
+
+
+def test__deserialize__none():
+    result = deserialize("None")
+    assert result is None
