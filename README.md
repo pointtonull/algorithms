@@ -441,8 +441,8 @@ encoded have no digits and consists solely of alphabetic characters. You can
 assume the string to be decoded is valid.
 
 Solution:
-- [tests](tests/test__run_lenght_encoding.py)
-- [implementation](src/run_lenght_encoding.py)
+- [tests](tests/test__run_length_encoding.py)
+- [implementation](src/run_length_encoding.py)
 
 
 ## Balance Parenthesis

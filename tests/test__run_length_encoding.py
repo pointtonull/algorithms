@@ -1,9 +1,9 @@
 from pytest import fixture
 
-from src.run_lenght_encoding import encode
+from src.run_length_encoding import encode
 
 """
-RUN-LENGHT ENCODING
+RUN-LENGTH ENCODING
 
 This problem was asked by Amazon.
 Difficulty: Easy
