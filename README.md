@@ -5,9 +5,9 @@ I maintain updated solving popular coding challenges once in a while.
 
 This repository contains a growing collection of algorithmic challenges solved with **Test-Driven Development**. Implementations live in `src/` with matching tests in `tests/`. Additional coursework-style exercises reside in `algorithmic_toolbox/` and `data_structures/` which are not run by default.
 
-New problems can be generated using the cookiecutter template in `problem_template/` via `make new` or `just new`. Helper scripts are kept under `util/` and common tasks (such as running the test suite) are exposed through both a `Makefile` and `justfile`.
+New problems can be generated using the cookiecutter template in `problem_template/` via `just new`. Helper scripts are kept under `util/` and common tasks (such as running the test suite) are exposed through `justfile`.
 
-Run `make test` (or `just test`) to execute the full suite. See `pyproject.toml` for the exact dependencies.
+Run `just test` to execute the full suite. See `pyproject.toml` for the exact dependencies.
 
 # Data Structures
 

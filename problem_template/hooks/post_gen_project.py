@@ -39,7 +39,7 @@ def main():
         safe_move(filename, "../{}".format(filename))
     append("README.md", "../README.md")
     remove_tmp_dir()
-    print("{}make tdd and happy hacking!{}".format(SUCCESS, TERMINATOR))
+    print("{}Use 'just test' for TDD and happy hacking!{}".format(SUCCESS, TERMINATOR))
 
 
 if __name__ == "__main__":

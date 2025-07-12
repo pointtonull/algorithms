@@ -1,3 +1,4 @@
+$(warning [DEPRECATED] Makefile is deprecated; please use 'just' instead)
 SRC = $(PWD)/src
 TESTS = $(PWD)/tests
 
@@ -39,7 +40,7 @@ coverage: deps
 
 help:  ## Show this help message
 	@echo "\033[1mUsage:\033[0m"
-	@echo "  make [target]\n"
+	@echo "  just [recipe]\n"
 	@echo "\033[1mTargets:\033[0m"
 	@awk -F ":.*?## " -v und="\033[2mundocumented\033[0m" '\
 		/^[A-z][^:\t ]+:/&&NF==2{\
